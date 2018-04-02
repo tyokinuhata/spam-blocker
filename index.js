@@ -20,20 +20,18 @@ const search = () => {
 
   client.get('search/tweets', params, (err, tweets, res) => {
     const statuses = tweets.statuses
-    const target = []
+    const targets = []
 
     for (status of statuses) {
-      target.push({
-        screen_name: status.user.screen_name,
-        text: status.text
-      })
+      targets.push(status.user.screen_name)
+      console.log('add ' + status.user.screen_name)
     }
 
-    fsExtra.writeJSONSync(__dirname + '/target.json', target)
+    fsExtra.writeJSONSync(__dirname + '/targets.json', targets)
   })
 }
 
-const block = () => {
+const block = (i) => {
   const client = new twitter({
     consumer_key: process.env.CONSUMER_KEY,
     consumer_secret: process.env.CONSUMER_SECRET,
@@ -41,16 +39,26 @@ const block = () => {
     access_token_secret: process.env.ACCESS_TOKEN_SECRET
   })
 
-  const params = {
-    screen_name: 'TV4DZUthYruyX7U'
+  const targets = fsExtra.readJSONSync(__dirname + '/targets.json')
+
+  if (typeof targets[i] === 'undefined') {
+    console.log('completed')
+    return
   }
 
-  const target = fsExtra.readJSONSync(__dirname + '/target.json')
+  const params = {
+    screen_name: targets[i]
+  }
 
   client.post('blocks/create', params, (err, tweets, res) => {
-    console.log(res)
+    if (!err) console.log('blocked ' + targets[i])
+    else console.log(err.message)
   })
 }
 
-// search()
-block()
+search()
+let i = 0
+setInterval(() => {
+  block(i)
+  i++
+}, 5000)
