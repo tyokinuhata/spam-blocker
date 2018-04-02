@@ -1,0 +1,14 @@
+{
+  "name": "spam-blocker",
+  "version": "1.0.0",
+  "description": "Spam block tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kazukichi <kazukiti201@gmail.com> (https://tyokinuhata.github.io/portfolio/)",
+  "license": "MIT",
+  "dependencies": {
+    "twitter": "^1.7.1"
+  }
+}
