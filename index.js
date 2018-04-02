@@ -11,7 +11,7 @@ const search = () => {
   })
 
   const params = {
-    q: '仮想通貨に関するビックウェーブ',
+    q: process.env.Q,
     lang: 'ja',
     locale: 'ja',
     result_type: 'mixed',
