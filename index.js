@@ -24,7 +24,7 @@ const search = () => {
 
     for (status of statuses) {
       targets.push(status.user.screen_name)
-      console.log('add ' + status.user.screen_name)
+      console.log('added ' + status.user.screen_name)
     }
 
     fsExtra.writeJSONSync(__dirname + '/targets.json', targets)
@@ -51,7 +51,7 @@ const block = (i) => {
   }
 
   client.post('blocks/create', params, (err, tweets, res) => {
-    if (!err) console.log('blocked ' + targets[i])
+    if (!err) console.log('blocked @' + targets[i])
     else console.log(err.message)
   })
 }
