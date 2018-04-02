@@ -1,5 +1,3 @@
-'use strict'
-
 const twitter = require('twitter')
 const fsExtra = require('fs-extra')
 require('dotenv').config()
