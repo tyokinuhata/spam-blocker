@@ -9,6 +9,7 @@
   "author": "Kazukichi <kazukiti201@gmail.com> (https://tyokinuhata.github.io/portfolio/)",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^5.0.1",
     "twitter": "^1.7.1"
   }
 }
