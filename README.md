@@ -4,7 +4,7 @@ Spam Blockerは特定の文字列に該当するツイートのツイート主�
 
 # 使用方法
 
-### APIキーの取得
+### KeyとAccess Tokenの取得
 
 https://apps.twitter.com/
 
@@ -36,15 +36,15 @@ COUNT=100
 
 |環境変数|説明|
 |:--|:--|
-|CONSUMER_KEY|https://apps.twitter.com/で取得したConsumer Keyを指定する|
-|CONSUMER_SECRET|https://apps.twitter.com/で取得したConsumer Secretを指定する|
-|ACCESS_TOKEN_KEY|https://apps.twitter.com/で取得したAccess Tokenを指定する|
-|ACCESS_TOKEN_SECRET|https://apps.twitter.com/で取得したAccess Token Secretを指定する|
-|Q|ブロック対象とするツイートに含まれる文字列を指定する|
-|LANG|ブロック対象となるツイートの言語を指定する|
-|LOCALE|送信するクエリの言語を指定する|
-|RESULT_TYPE|ブロック対象のツイートの種類を指定する.<br>popular: 人気のツイート<br>recent: 最新のツイート<br>mixed: 全てのツイート|
-|COUNT|ブロック人数を指定する. 1 - 100の間で指定する|
+|CONSUMER_KEY|https://apps.twitter.com/ で取得したConsumer Key|
+|CONSUMER_SECRET|https://apps.twitter.com/ で取得したConsumer Secret|
+|ACCESS_TOKEN_KEY|https://apps.twitter.com/ で取得したAccess Token|
+|ACCESS_TOKEN_SECRET|https://apps.twitter.com/ で取得したAccess Token Secret|
+|Q|ブロック対象とするツイートに含まれる文字列|
+|LANG|ブロック対象となるツイートの言語|
+|LOCALE|送信するクエリの言語|
+|RESULT_TYPE|ブロック対象のツイートの種類.<br>popular: 人気のツイート<br>recent: 最新のツイート<br>mixed: 全てのツイート|
+|COUNT|ブロック人数. 1 - 100の間で指定する|
 
 詳細については, https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets を参照.
 
