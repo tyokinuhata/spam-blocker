@@ -51,5 +51,6 @@ COUNT=100
 ### 実行
 
 ```bash
-$ node index.js
+$ chmod +x index.js
+$ ./index.js
 ```

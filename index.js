@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const search = require(__dirname + '/lib/search.js')
 const block = require(__dirname + '/lib/block.js')
 
